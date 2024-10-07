@@ -8,6 +8,8 @@ typealias SQLiteValue = OpaquePointer
 
 let SQLITE_TRANSIENT = unsafeBitCast(OpaquePointer(bitPattern: -1), to: sqlite3_destructor_type.self)
 
+#define SQLITE_HAS_CODEC
+
 /// A Database connection.
 ///
 /// You don't create a database directly. Instead, you use a DatabaseQueue, or
