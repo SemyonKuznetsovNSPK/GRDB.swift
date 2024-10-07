@@ -1,5 +1,7 @@
 #if os(Linux)
 import Glibc
+#elseif os(macOS) || os(iOS) || os(watchOS) || os(tvOS) || os(visionOS)
+import Darwin
 #endif
 
 /// A class that gathers information about one statement during its compilation.
